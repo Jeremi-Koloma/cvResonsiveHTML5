@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #d4e8ee;
+    font-family: 'Poppins-Regular-200', sans-serif;
+}
+/* Le contenue */
+.main-content{
+    min-height: 100vh;
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Division du 7 colonnes s*/
+}
+/* ******************************************** La partie Gauche ********************************* */
+.left-section{
+    grid-column: span 2; /* Prendre 2 colonnes parmi les 7 */
+    height: 100%;
+    background-color: #373736;
+     
+}
+.left-content .profile, .contact-info .main-title, .contact-info ul, .skills-section .main-title,.skills-section ul,
+.references-section .main-title, .references-section .referee {
+    padding: 1em 1em;
+}
+/* La partie contact */
+.profile{
+    width: 100%;
+    border-bottom: 1px solid #f7f7f7f7; /* tired au dessous de nom */
+}
+.image{
+    width: 100%;
+    text-align: center;
+}
+.profile img{
+    width: 100%;
+    /*border-radius: 50%;
+    border: 8px solid #f7f7f7  ;*/
+}
+.name{
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 1px;
+    padding: 1.2rem 0;
+}
+.career{
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+.main-title{
+    font-size: 1rem;
+    letter-spacing: 1px; 
+    color: #f7f7f7;
+    padding-top: 10px;
+    height: 50px;
+}
+/* .main-title ul li{
+    padding-top: 28px;
+} */
+h3{
+     background-color: #242627 ;
+}
+.contact-info ul{
+    padding-top: 0.5rem;
+}
+.contact-info ul li{
+    padding: .4rem 0;
+    display: flex;
+    align-items: center ;
+    color: white;
+    font-size: 0.9rem;
+}
+.contact-info ul li i{
+    padding-right: 1rem;
+    font-size: 1.2rem;
+}
+/* La partie compétence */
+.skills-section ul li{
+     padding: .4rem 0;
+}
+.progress-bar{
+    width: 100%;
+    height: .4rem;
+    background-color: white ;
+    position: relative ;
+    height: 15px;
+}
+.progress{
+    height: 100%;
+    position: absolute ;
+    left: 0;
+    background-color: #125b86;
+    height: 15px;
+}
+.js-progress{
+     width: 70%;
+}
+.ps-progress{
+    width: 90%;
+}
+.c-progress{
+    width: 50%;
+}
+.skill-title{
+    text-transform:  uppercase;
+    color: #f7f7f7;
+    font-size: 1rem;
+    padding-right: 1rem;
+}
+.skills-section ul li{
+    list-style-type: none;
+}
+.referee ul li{
+    list-style-type: none;
+}
+/* La partie Référence */
+.sub-title{
+    padding-top: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #f7f7f7;
+}
+.sub-para{
+    color: #ccc;
+    padding: .4rem 0;
+}
+.references-section li{
+    color: #ccc;
+    padding: .2rem 0;
+}
+.references-section li i{
+    padding-right: .5rem;
+    font-size: 1.2rem;
+}
+
+/*  ******************************************** La partie Droite ******************************* */
+.right-section{
+    grid-column: span 5; /* Prend le reste des 5 colonnes */
+    height: 100%;
+    background-color: white;
+}
+.right-main-content{
+    padding: 2rem 3rem;
+}
+.right-title{
+    letter-spacing: 1px;
+    text-transform: uppercase ;
+    color: #125b86;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.para{
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+}
+.sect{
+    padding-bottom: 2rem;
+}
+/* ********************************* La partie Experience ********************************* */
+.timeline{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 15px;
+}
+/* Nom de l'Entrerpise */
+.tl-title{
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color: #373736;
+    text-transform: uppercase;
+}
+/* poste occupper */
+.tl-title-2{
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: #125b86;
+}
+
+
+
+/* Media Querries */
+@media screen and (max-width:823px) {
+    .right-title::after{
+        width: 40%;
+    }
+    .name{
+        text-align: center;
+    }
+    .career{
+        text-align: center;
+    }
+}
+@media screen and (max-width:681px) {
+    .right-title::after{
+        width: 30%;
+    }
+    .name{
+        text-align: center;
+    }
+    .career{
+        text-align: center;
+    }
+}
+@media screen and (max-width:780px) { 
+    .timeline{
+        grid-template-columns: repeat(1, 1fr); /* Renvoie les timeline à la ligne*/
+    }
+    .name{
+        text-align: center;
+    }
+    .career{
+        text-align: center;
+    }
+}
+@media screen and (max-width:780px) { 
+    .left-section{
+        grid-column: span 3; /* diviser en 3 colonnes */
+    }
+    .right-section{
+        grid-column: span 4; /* diviser en 4 colonnes */
+    }
+    .name{
+        text-align: center;
+    }
+    .career{
+        text-align: center;
+    }
+}
+@media screen and (max-width:1200px) { 
+    .main-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .profile img{
+        width: 40% ; /* La taille d'image profile */
+    }
+    .name{
+        text-align: center;
+    }
+    .career{
+        text-align: center;
+    }
+}
+@media screen and (max-width:700px) { 
+    .profile img{
+        width: 60% ; /* La taille d'image profile */
+    }
+}
+@media screen and (max-width:390px) { 
+    .name{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:472px) { 
+    .right-title::after{
+        display: none;
+    }
+}
