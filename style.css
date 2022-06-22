@@ -16,13 +16,13 @@ body{
     width: 80%;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Division du 7 colonnes s*/
+    grid-template-columns: repeat(7, 1fr); /* Division du 7 colonnes */
 }
 /* ******************************************** La partie Gauche ********************************* */
 .left-section{
     grid-column: span 2; /* Prendre 2 colonnes parmi les 7 */
     height: 100%;
-    background-color: #373736;
+    background-color: #363C48;
      
 }
 .left-content .profile, .contact-info .main-title, .contact-info ul, .skills-section .main-title,.skills-section ul,
@@ -39,10 +39,11 @@ body{
     text-align: center;
 }
 .profile img{
-    width: 100%;
+    width: 80%;
     /*border-radius: 50%;
     border: 8px solid #f7f7f7  ;*/
 }
+/* ************* Nom et poste ************** */
 .name{
     font-size: 2rem;
     color: white;
@@ -50,23 +51,22 @@ body{
     padding: 1.2rem 0;
 }
 .career{
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: rgb(255, 255, 255);
     letter-spacing: 1px;
     padding-bottom: 1rem;
 }
+/* ******************************************* CSs des titre à gauche ******* */
 .main-title{
     font-size: 1rem;
     letter-spacing: 1px; 
-    color: #f7f7f7;
+    color: #fff;
     padding-top: 10px;
     height: 50px;
 }
-/* .main-title ul li{
-    padding-top: 28px;
-} */
+/* ******************************************* font des titre à gauche ******* */
 h3{
-     background-color: #242627 ;
+     background-color: #262A35 ; /* couleur j'ai aimé #3996c4 */
 }
 .contact-info ul{
     padding-top: 0.5rem;
@@ -82,22 +82,24 @@ h3{
     padding-right: 1rem;
     font-size: 1.2rem;
 }
-/* La partie compétence */
+/*  *************************************** La partie Langue à gauche ********************** */
 .skills-section ul li{
      padding: .4rem 0;
 }
+/* ********************* 1ere Barre de rempliassage Langue *************** */
 .progress-bar{
     width: 100%;
     height: .4rem;
-    background-color: white ;
+    background-color: #262A35 ;
     position: relative ;
     height: 15px;
 }
+/* ********************* 2em Barre de rempliassage Langue *************** */
 .progress{
     height: 100%;
     position: absolute ;
     left: 0;
-    background-color: #125b86;
+    background-color: #fff; /* A remplacer par #3996c4 */
     height: 15px;
 }
 .js-progress{
@@ -129,7 +131,7 @@ h3{
     color: #f7f7f7;
 }
 .sub-para{
-    color: #ccc;
+    color: #fff;
     padding: .4rem 0;
 }
 .references-section li{
@@ -140,6 +142,9 @@ h3{
     padding-right: .5rem;
     font-size: 1.2rem;
 }
+.referee ul li{
+    color: #fff;
+}
 
 /*  ******************************************** La partie Droite ******************************* */
 .right-section{
@@ -148,41 +153,60 @@ h3{
     background-color: white;
 }
 .right-main-content{
-    padding: 2rem 3rem;
+    padding: 1rem 2rem;
 }
+/* ***************** Les grande titre  à droite ********************* */
 .right-title{
     letter-spacing: 1px;
     text-transform: uppercase ;
-    color: #125b86;
+    color: black; /* a remplacer avec cette couleur #3996c4 */ 
     margin-bottom: 1.2rem;
     position: relative;
+    border-top: 1px solid #b4b8c0;
+    border-bottom: 1px solid #b4b8c0;
 }
 
 .para{
     line-height: 1.6rem;
     font-size: 1.1rem;
 }
+.para ul{
+    margin-left: -90px;
+}
+.tl-content h5{
+    margin-left: -114px;
+}
+.school{
+    margin-left: -115px;
+}
 .sect{
     padding-bottom: 2rem;
 }
-/* ********************************* La partie Experience ********************************* */
+/* ********************************* La partie Experience *********************** */
 .timeline{
-    display: grid;
+    /* display: grids; */
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 15px;
 }
-/* Nom de l'Entrerpise */
+.left-tl-content {
+    width: 290px;
+}
+.right-tl-content {
+    width: calc(100% - 290px);
+}
+/* ************************ Nom de l'Entrerpise ************* */
 .tl-title{
     letter-spacing: 1px;
-    font-size: 1.2rem;
-    color: #373736;
+    font-size: 1.1rem;
+    color: black; /* Couleurs Nom des entreprises */
     text-transform: uppercase;
 }
-/* poste occupper */
+/* ************************************ poste occupper ********************* */
 .tl-title-2{
     letter-spacing: 1px;
     font-size: 1.1rem;
-    color: #125b86;
+    color: black; /* à remplacer par cette couleur #3996c4 */
 }
 
 
@@ -252,6 +276,24 @@ h3{
 @media screen and (max-width:700px) { 
     .profile img{
         width: 60% ; /* La taille d'image profile */
+    }
+    .timeline{
+        flex-direction: column;
+    }
+    .left-tl-content {
+        width: 100%;
+    }
+    .right-tl-content {
+        width: 100%;
+    }
+    .para ul{
+        margin-left: 1rem;
+    }
+    .tl-content h5{
+        margin-left: 0.1rem;
+    }
+    .school{
+        margin-left: 0.2rem;
     }
 }
 @media screen and (max-width:390px) { 
